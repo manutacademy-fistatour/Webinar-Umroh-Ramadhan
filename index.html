@@ -341,7 +341,7 @@ function sendToWhatsApp() {
     var nama = document.querySelector('input[name="Nama"]').value;
     var nomor = document.querySelector('input[name="WhatsApp"]').value;
     var email = document.querySelector('input[name="Email"]').value;
-    var pesan = `Halo Admin, saya ingin daftar webinar.\nNama: ${nama}\nNomor WhatsApp: ${nomor}\nEmail: ${email}`;
+    var pesan = `Assalamualaikum, perkenalkan saya ${nama}.\nNomor WhatsApp: ${nomor}\nEmail: ${email}`;
     var url = 'https://wa.me/6289683425577?text=' + encodeURIComponent(pesan);
     window.open(url, '_blank');
     // Jika ingin langsung ke grup, ganti url dengan link grup WhatsApp
