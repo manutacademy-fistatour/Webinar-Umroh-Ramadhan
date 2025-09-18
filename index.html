@@ -319,27 +319,24 @@
                 <h2 class="font-amiri text-4xl font-bold mb-4">Daftar Sekarang!</h2>
                 <p class="text-xl mb-8">Jangan sampai terlewat kesempatan emas ini</p>
                 
-                <form id="registrationForm" class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-6" action="https://formspree.io/f/mldwyvll" method="POST">
-                    <input type="hidden" name="_redirect" value="https://chat.whatsapp.com/BZo809EH1idJUw8wBVb8Sq">
-                    <div>
-                       <input type="text" id="fullName" name="fullName" placeholder="Nama Lengkap" required
-                           class="w-full px-6 py-4 rounded-full text-gray-800 text-lg focus:outline-none focus:ring-4 focus:ring-gold-400">
-                    </div>
-                    
-                    <div>
-                       <input type="tel" id="whatsapp" name="whatsapp" placeholder="Nomor WhatsApp" required
-                           class="w-full px-6 py-4 rounded-full text-gray-800 text-lg focus:outline-none focus:ring-4 focus:ring-gold-400">
-                    </div>
-                    
-                    <div>
-                       <input type="email" id="email" name="email" placeholder="Email" required
-                           class="w-full px-6 py-4 rounded-full text-gray-800 text-lg focus:outline-none focus:ring-4 focus:ring-gold-400">
-                    </div>
-                    
-                    <button type="submit" class="w-full gold-gradient text-white py-4 rounded-full text-xl font-bold hover:scale-105 transform transition-all duration-300 pulse-glow">
-                        Daftar Sekarang & Masuk Grup 🚀
-                    </button>
-                </form>
+               <form id="registrationForm" class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-6" action="https://formspree.io/f/mldwyvll" method="POST">
+    <!-- Form tidak mengirim ke Formspree, hanya redirect ke WhatsApp -->
+    <div>
+       <input type="text" name="Nama" placeholder="Nama Lengkap" required
+           class="w-full px-6 py-4 rounded-full text-gray-800 text-lg focus:outline-none focus:ring-4 focus:ring-gold-400">
+    </div>
+    <div>
+       <input type="tel" name="WhatsApp" placeholder="Nomor WhatsApp" required
+           class="w-full px-6 py-4 rounded-full text-gray-800 text-lg focus:outline-none focus:ring-4 focus:ring-gold-400">
+    </div>
+    <div>
+       <input type="email" name="Email" placeholder="Email" required
+           class="w-full px-6 py-4 rounded-full text-gray-800 text-lg focus:outline-none focus:ring-4 focus:ring-gold-400">
+    </div>
+    <button type="button" onclick="window.open('https://chat.whatsapp.com/BZo809EH1idJUw8wBVb8Sq','_blank')" class="w-full gold-gradient text-white py-4 rounded-full text-xl font-bold hover:scale-105 transform transition-all duration-300 pulse-glow">
+        Daftar Sekarang & Masuk Grup 🚀
+    </button>
+</form>
                 
                 <p class="text-emerald-100 mt-6">
                     *Setelah mendaftar, Anda akan langsung diarahkan ke grup WhatsApp eksklusif
@@ -440,12 +437,10 @@
         // Animasi "scroll reveal"
         function revealOnScroll() {
             const reveals = document.querySelectorAll('.scroll-reveal');
-            
             reveals.forEach(element => {
                 const windowHeight = window.innerHeight;
                 const elementTop = element.getBoundingClientRect().top;
                 const elementVisible = 150;
-                
                 if (elementTop < windowHeight - elementVisible) {
                     element.classList.add('revealed');
                 }
@@ -459,10 +454,12 @@
             });
         }
 
-        // Event listeners
+        // Event listeners untuk animasi dan scroll
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
         revealOnScroll();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9805f0dfd715ff8d',t:'MTc1ODA4NDE4OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
+
+            
