@@ -439,12 +439,10 @@
         // Animasi "scroll reveal"
         function revealOnScroll() {
             const reveals = document.querySelectorAll('.scroll-reveal');
-            
             reveals.forEach(element => {
                 const windowHeight = window.innerHeight;
                 const elementTop = element.getBoundingClientRect().top;
                 const elementVisible = 150;
-                
                 if (elementTop < windowHeight - elementVisible) {
                     element.classList.add('revealed');
                 }
@@ -458,7 +456,7 @@
             });
         }
 
-        // Event listeners
+        // Event listeners untuk animasi dan scroll
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
         revealOnScroll();
