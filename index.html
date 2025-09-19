@@ -342,7 +342,7 @@ function sendToWhatsApp() {
     var nomor = document.querySelector('input[name="WhatsApp"]').value;
     var email = document.querySelector('input[name="Email"]').value;
     var pesan = `Assalamualaikum, perkenalkan saya ${nama}.\nNomor WhatsApp: ${nomor}\nEmail: ${email}`;
-    var url = 'https://wa.me/6289683425577?text=' + encodeURIComponent(pesan);
+varurl='https://chat.whatsapp.com/BZo809EH1idJUw8wBVb8Sq?mode=ems_copy_t?text=' + encodeURIComponent(pesan);
     window.open(url, '_blank');
     // Jika ingin langsung ke grup, ganti url dengan link grup WhatsApp
 }
